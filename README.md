@@ -9,7 +9,7 @@ Para começa a rodar o projeto é importante ter na sua máquina o MySql workben
 ![Captura de tela 2023-04-21 171443](https://user-images.githubusercontent.com/56524231/233726752-b0bfa141-618c-4181-b897-6347d1b71047.png)<br>
 4- ao entrar no seu banco, vá na opção Data Import/Restore.<br>
 ![Captura de tela 2023-04-21 172004](https://user-images.githubusercontent.com/56524231/233728014-4be1bd40-0028-4f33-a9fd-6960a232028a.png)<br>
-5- Selecione a opção debaixo, e procure o drump do projeto que estar na pasta do projeto em laragom/www/cadastro/script e selecione o arquivo. em seguinda va na opção debaixo e clique em New para dá um nome, logo após clique em start Import.<br>
+5- Selecione a opção debaixo, e procure o drump do projeto que estar na pasta do projeto em laragom/www/cadastro/script e selecione o arquivo. Em seguinda vá na opção debaixo e clique em New para dá um nome, logo após clique em start Import.<br>
 ![Captura de tela 2023-04-21 172436](https://user-images.githubusercontent.com/56524231/233729088-1421be1c-a219-4938-9f80-439a4ab1f8b6.png)<br>
 6- Volte para a tela do Laragom e clique com o botão direito do seu mouse irar abrir uma janela, va em www e em seguida clique no seu projeto. <br><br>
 
