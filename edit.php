@@ -13,7 +13,7 @@ include_once "editController.php"
 </head>
 
 <body>
-    <a href="index.php">Voltar</a>
+    <a class="botao" href="index.php">Voltar</a>
     <div class="box">
         <form action="saveEdit.php" method="POST">
             <fieldset>

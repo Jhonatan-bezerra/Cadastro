@@ -13,7 +13,7 @@ include_once "visualizarController.php"
 </head>
 
 <body>
-    <a href="index.php">Voltar</a>
+    <a class="botao" href="index.php">Voltar</a>
     <div class="box">
         <form method="POST">
             <fieldset>

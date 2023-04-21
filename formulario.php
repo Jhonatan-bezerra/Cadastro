@@ -13,7 +13,7 @@ include_once "cadastroController.php"
 </head>
 
 <body>
-    <a href="index.php">Voltar</a>
+    <a class="botao" href="index.php">Voltar</a>
     <div class="box">
         <form action="formulario.php" method="POST">
             <fieldset>
