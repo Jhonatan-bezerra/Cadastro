@@ -27,7 +27,7 @@ include_once "indexController.php"
         <table class="table table-striped table-bordered table-lg">
             <thead>
                 <tr>
-                    <th scope="col">Registo</th>
+                    <th scope="col">Registro</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Sobrenome</th>
                     <th scope="col">Cargo</th>
