@@ -3,6 +3,7 @@ include_once "editController.php"
 ?>
 <!DOCTYPE html>
 <html lang="br-pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@ include_once "editController.php"
     <link rel="stylesheet" type="text/css" href="Style/style.css" media="screen" />
     <title>Editar Funcionário</title>
 </head>
+
 <body>
     <a href="index.php">Voltar</a>
     <div class="box">
@@ -36,15 +38,39 @@ include_once "editController.php"
                 <input type="date" name="data_nascimento" id="data_nascimento" value="<?php echo $data_nasc ?>" required>
                 <br><br><br>
                 <div class="inputBox">
-                    <input type="text" name="salario" id="salario" class="inputUser" value="<?php echo $salario ?>" required>
+                    <input type="text" onKeyUp="mascaraMoeda(this, event)" name="salario" id="salario" class="inputUser" value="<?php echo $salario ?>" required>
                     <label for="salario" class="labelInput">Salário</label>
                 </div>
                 <br><br>
                 <input type="hidden" name="id" value="<?php echo $id ?>">
                 <input type="submit" name="update" id="update">
-                
+
             </fieldset>
         </form>
     </div>
 </body>
+<script>
+    String.prototype.reverse = function() {
+        return this.split('').reverse().join('');
+    };
+
+    function mascaraMoeda(campo, evento) {
+        var tecla = (!evento) ? window.event.keyCode : evento.which;
+        var valor = campo.value.replace(/[^\d]+/gi, '').reverse();
+        var resultado = "";
+        var mascara = "##.###.###,##".reverse();
+        for (var x = 0, y = 0; x < mascara.length && y < valor.length;) {
+            if (mascara.charAt(x) != '#') {
+                resultado += mascara.charAt(x);
+                x++;
+            } else {
+                resultado += valor.charAt(y);
+                y++;
+                x++;
+            }
+        }
+        campo.value = resultado.reverse();
+    }
+</script>
+
 </html>

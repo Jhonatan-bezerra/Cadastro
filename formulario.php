@@ -3,6 +3,7 @@ include_once "cadastroController.php"
 ?>
 <!DOCTYPE html>
 <html lang="br-pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@ include_once "cadastroController.php"
     <link rel="stylesheet" type="text/css" href="Style/style.css" media="screen" />
     <title>Cadastro de Funcionário</title>
 </head>
+
 <body>
     <a href="index.php">Voltar</a>
     <div class="box">
@@ -36,15 +38,43 @@ include_once "cadastroController.php"
                 <input type="date" name="data_nascimento" id="data_nascimento" required>
                 <br><br><br>
                 <div class="inputBox">
-                    <input type="text" name="salario" id="salario" class="inputUser" required>
+                    <input type="text" onKeyUp="mascaraMoeda(this, event)" name="salario" id="salario" class="inputUser" required>
                     <label for="salario" class="labelInput">Salário</label>
                 </div>
+                <br>
+                <div class="inputBox">
+                    <textarea class="inputs" name="descricao" id="descricao" cols="25" rows="10" placeholder="descrição"></textarea>
+                </div>
                 <br><br>
-                
+
                 <input type="submit" name="submit" id="submit">
 
             </fieldset>
         </form>
     </div>
 </body>
+<script>
+    String.prototype.reverse = function() {
+        return this.split('').reverse().join('');
+    };
+
+    function mascaraMoeda(campo, evento) {
+        var tecla = (!evento) ? window.event.keyCode : evento.which;
+        var valor = campo.value.replace(/[^\d]+/gi, '').reverse();
+        var resultado = "";
+        var mascara = "##.###.###,##".reverse();
+        for (var x = 0, y = 0; x < mascara.length && y < valor.length;) {
+            if (mascara.charAt(x) != '#') {
+                resultado += mascara.charAt(x);
+                x++;
+            } else {
+                resultado += valor.charAt(y);
+                y++;
+                x++;
+            }
+        }
+        campo.value = resultado.reverse();
+    }
+</script>
+
 </html>
