@@ -42,9 +42,7 @@ include_once "cadastroController.php"
                     <label for="salario" class="labelInput">Salário</label>
                 </div>
                 <br>
-                <div class="inputBox">
-                    <textarea class="inputs" name="descricao" id="descricao" cols="25" rows="10" placeholder="descrição"></textarea>
-                </div>
+                
                 <br><br>
 
                 <input type="submit" name="submit" id="submit">
